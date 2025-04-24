@@ -1,0 +1,18 @@
+<ul>
+    <li>
+        <a routerLink="/add" >Add</a>
+    </li>
+</ul>
+<button (click)="setAll()">All Set</button>
+<ul>
+    <li *ngFor="let user of users$ | async">
+        {{user.id}} {{user.name}} 
+        <button (click)="delete(user.id??0)">Delete</button>
+        <button (click)="view(user.id??0)">view</button>
+        <button (click)="update(user.id??0)">update</button>
+    </li>
+</ul>
+
+<p *ngIf="userObj$ | async as user">{{user.name}}</p>
+
+<router-outlet />
