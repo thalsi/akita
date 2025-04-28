@@ -13,4 +13,17 @@ Akita is like a memory box in your app. It holds data (like tasks) so that you d
 3. Service – Connects API with the store (do HTTP requests and update store)
 4. Model / Interface – Defines the shape of data
 
+##  File Structure
 
+src/app/features/products/
+├── state/
+│   ├── products.model.ts    # Type definitions
+│   ├── products.store.ts   # Akita store
+│   ├── products.query.ts   # Akita queries
+│   ├── products.api.ts     # Pure API calls
+│   └── products.service.ts # Business logic
+└── products.module.ts
+
+
+## ref
+https://chat.deepseek.com/a/chat/s/5d24c0e5-5b5a-4527-943f-995a2a2c2563
